@@ -1,5 +1,11 @@
 # Gatsby Issue
 
+When in development mode react components work as expected. When you run this locally using `cd packages/www && yarn start` then visit `http://localhost:8000/page-2` you should see the page with a navbar. On small screens there is a menu button to open the menu. Also this uses [`gatsby-background-image`](https://www.gatsbyjs.com/plugins/gatsby-background-image/) for the hero background. This is how I would expect that page to look when I build it to publish it.
+![dev](/dev.gif)
+
+But when I try build it and serve it `cd packages/www && yarn build && yarn gatsby serve` on `http://localhost:9000/page-2` I would expect the page to have a background image in hero and the menu button to be interactive. But for some reason that is not working.
+![build](/build.gif)
+
 ## Development Setup
 
 Suggested IDE is [VSCode](https://code.visualstudio.com) since all the configs are provided.
