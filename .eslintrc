@@ -1,0 +1,105 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
+  "rules": {
+    // For the few semi-colons required (e.g. inline array operations), place them at the beginning of the statement
+    "semi": ["error", "never"],
+    // For the few semi-colons required (e.g. inline array operations), place them at the beginning of the statement
+    "semi-style": ["error", "first"],
+    // Semi colons are visual garbage
+    "@typescript-eslint/semi": ["error", "never"],
+    // Spacing in brackets is consistent and readable
+    "array-bracket-spacing": ["error", "always"],
+    // Spacing in brackets is consistent and readable
+    "computed-property-spacing": ["error", "always"],
+    // Spacing in brackets is consistent and readable
+    "space-in-parens": [
+      "error",
+      "always",
+      {
+        "exceptions": ["empty"]
+      }
+    ],
+    // Preferable, but the author should know best for the situation
+    "import/prefer-default-export": "off",
+    // Windows users may checkout as CRLF, but check in as LF, which this rule breaks
+    "linebreak-style": "off",
+    // Be consistent about where the object braces go
+    "object-curly-newline": [
+      "error",
+      {
+        "consistent": true
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed",
+      {
+        "requireForBlockBody": false
+      }
+    ],
+    // There's no need to have more than 1 empty line, ever
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeLineComment": true
+      }
+    ],
+    // No unused variables except when prepended with _, to indicate that they're not to be used, but require definition to be valid code
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    // Typescript types should be delimited by commas, not semi-colons
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "comma"
+        },
+        "singleline": {
+          "delimiter": "comma"
+        }
+      }
+    ],
+    // This plugin sorts alphabetically by default
+    "simple-import-sort/sort": "off",
+    // Add new line between imports
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always"
+      }
+    ]
+  }
+}

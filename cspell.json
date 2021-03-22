@@ -1,0 +1,37 @@
+{
+  "ignorePaths": [
+    ".eslintignore",
+    ".gitattributes",
+    ".gitignore",
+    ".prettierignore",
+    "**/.gitignore",
+    "**/.vscode/**",
+    "lerna.*",
+    "**/*.config.*/**",
+    "**/{cspell.*,cSpell.*,.cspell.*,cspell.config.*}/**",
+    "**/coverage/**",
+    "**/node_modules/**",
+    "**/package*.json",
+    "**/tsconfig.json",
+    "**/yarn.lock",
+    "**/dist/**",
+    "**/build/**",
+    "**/*.{ico,svg,png,jpg}",
+    "lcov.info",
+    "**/coverage/**",
+    "**/public/**"
+  ],
+  "words": [
+    "webfonts",
+    "styl",
+    "commitlint",
+    "semibold",
+    "Khula",
+    "gtag",
+    "gbimage",
+    "topshot",
+    "nbatopshot",
+    "tailwindcss",
+    "purgecss"
+  ]
+}
