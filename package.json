@@ -8,9 +8,6 @@
   "workspaces": {
     "packages": [
       "packages/**"
-    ],
-    "nohoist": [
-      "gatsby"
     ]
   },
   "devDependencies": {

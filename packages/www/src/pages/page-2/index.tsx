@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { getImage } from 'gatsby-plugin-image'
-import { convertToBgImage } from 'gbimage-bridge'
-import BackgroundImage from 'gatsby-background-image'
+// import { getImage } from 'gatsby-plugin-image'
+// import { convertToBgImage } from 'gbimage-bridge'
+// import BackgroundImage from 'gatsby-background-image'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../../components/Layout'
@@ -20,16 +20,16 @@ type HeroProps = {
   backgroundImage:any,
 }
 
-const Hero = ( { backgroundImage }:HeroProps ) => {
-  // @ts-expect-error this is temporary bridge for bringing gatsby-background-image to Gatsby 3
-  const bgImage = convertToBgImage( getImage( backgroundImage ) )
+const Hero = ( { backgroundImage }:HeroProps ) =>
+// @ts-expect-error this is temporary bridge for bringing gatsby-background-image to Gatsby 3
+// const bgImage = convertToBgImage( getImage( backgroundImage ) )
 
-  return (
-    <BackgroundImage
-      Tag="section"
-      preserveStackingContext
-      {...bgImage}
-    >
+  (
+    // <BackgroundImage
+    //   Tag="section"
+    //   preserveStackingContext
+    //   {...bgImage}
+    // >
       <Layout className="h-80 pb-2 text-center flex flex-col justify-between items-center">
         <div />
         <div>
@@ -49,9 +49,8 @@ const Hero = ( { backgroundImage }:HeroProps ) => {
           fugiat! Illo iste accusamus nemo quam quos quaerat!
         </p>
       </Layout>
-    </BackgroundImage>
+    {/* </BackgroundImage> */}
   )
-}
 
 const Market = () => {
   const { backgroundImage } = useStaticQuery( graphql`

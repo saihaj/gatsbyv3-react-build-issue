@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: 'Bug Report',
-    description: 'React components are not working in Gatsby build version compared to dev.',
+    description:
+      'React components are not working in Gatsby build version compared to dev.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -19,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [ 'Montserrat:100,200,300,400,400i,500,600,700,800,900', 'Khula' ],
+        fonts: ['Montserrat:100,200,300,400,400i,500,600,700,800,900', 'Khula'],
         display: 'swap',
       },
     },
