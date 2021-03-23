@@ -1,3 +1,5 @@
+**Solution**: https://github.com/gatsbyjs/gatsby/discussions/30409#discussioncomment-518387
+
 # Gatsby Issue
 
 When in development mode react components work as expected. When you run this locally using `cd packages/www && yarn start` then visit `http://localhost:8000/page-2` you should see the page with a navbar. On small screens there is a menu button to open the menu. Also this uses [`gatsby-background-image`](https://www.gatsbyjs.com/plugins/gatsby-background-image/) for the hero background. This is how I would expect that page to look when I build it to publish it.
