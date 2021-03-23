@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
-    "lib": ["es2020"],
     "module": "commonjs",
-    "target": "es2020",
+    "target": "es5",
+    "lib": [
+      "ES2020",
+      "DOM"
+    ],
     "strict": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,5 +16,11 @@
     "resolveJsonModule": true,
     "allowJs": true
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src",
+    "*.config.js"
+  ]
 }

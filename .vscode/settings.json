@@ -17,7 +17,4 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "eslint.workingDirectories": [
-    { "directory": "packages/**", "changeProcessCWD": true }
-  ]
 }

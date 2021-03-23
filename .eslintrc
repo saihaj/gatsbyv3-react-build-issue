@@ -8,6 +8,7 @@
     "airbnb-base",
     "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "parserOptions": {
@@ -59,12 +60,6 @@
         "maxEOF": 1
       }
     ],
-    "lines-around-comment": [
-      "error",
-      {
-        "beforeLineComment": true
-      }
-    ],
     // No unused variables except when prepended with _, to indicate that they're not to be used, but require definition to be valid code
     "no-unused-vars": [
       "error",
@@ -100,6 +95,23 @@
       {
         "newlines-between": "always"
       }
-    ]
+    ],
+     // No need to have the .jsx file extension
+     "react/jsx-filename-extension": "off",
+     // No need to sort methods in class components, and it can sometimes mess with member and function declarations
+     "react/sort-comp": "off",
+     // Prefer passing in ES6 default values to function components (https://github.com/yannickcr/eslint-plugin-react/issues/2396)
+     "react/require-default-props": "off",
+     // There's no point disabling prop spreading, it can be useful if not abused
+     "react/jsx-props-no-spreading": "off",
+     // Let Typescript infer the return types
+     "@typescript-eslint/explicit-module-boundary-types": "off",
+     // Use the new JSX transform React v17
+     "react/jsx-uses-react": "off",
+     "react/react-in-jsx-scope": "off",
+     // https://eslint.org/docs/rules/no-shadow seems sensible to not have shadow variables, but can get annoying real quick, especially in the case of reducers
+     "no-shadow": "off",
+     "@typescript-eslint/no-shadow": "off",
+     "lines-around-comment": ["off", { "beforeBlockComment": false }]
   }
 }
